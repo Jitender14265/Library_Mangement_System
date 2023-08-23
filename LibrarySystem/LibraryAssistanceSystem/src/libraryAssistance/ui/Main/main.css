@@ -1,0 +1,25 @@
+/* Styles for a regular button */
+.button {
+    -fx-background-color: #ababab; /* Background color */
+    -fx-text-fill: #FFFFFF; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    /*-fx-effect: dropshadow(rgba(0, 0, 0, 0.3), 3, 2, 2, 0, 0);*/
+}
+
+
+.button:hover {
+    -fx-background-color:rgb(128, 128, 128)
+     /* New background color on hover */
+}
+
+/* Styles for when the button is pressed */
+.button:pressed {
+    -fx-background-color:rgb(128, 128, 128);
+    /*-fx-inner-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3); /* New background color when pressed */
+
+}

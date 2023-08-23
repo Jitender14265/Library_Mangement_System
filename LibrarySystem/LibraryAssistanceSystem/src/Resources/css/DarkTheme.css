@@ -1,0 +1,54 @@
+
+*{
+	-fx-primary :#2A3737;
+	-fx-secondary:#FFFF8D;
+	-fx-primrytxt:#B2b2b2;
+	-fx-try:#74767a;
+	
+	}
+.root{
+	-fx-background-color: -fx-primary ;
+}
+
+.text-field-no-border {
+    -fx-background-color:transparent;
+    -fx-border-color: gray;
+    /*-fx-background-insets: 0 0 1 0;*/
+    -fx-padding-left:2px ;
+    -fx-border-width: 0 0 2 0;
+    -fx-text-fill: rgb(192, 192, 192); 
+}
+
+.button{
+	
+	-fx-text-fill:-fx-primrytxt;
+}
+
+
+.login-button{
+	-fx-background-color:transparent;
+	-fx-border-color:-fx-secondary;
+	-fx-border-radius:20px;
+	-fx-background-radius:20px;
+	 -fx-border-width: 2px;
+}
+
+
+.login-button:hover {
+    -fx-background-color: -fx-try; /* Change the background color on hover */
+    -fx-text-fill: white; /* Change text color on hover */
+}
+
+/* styles.css */
+.text-field {
+    -fx-text-fill: -fx-primrytxt;
+    -fx-font-size: 13pt;
+    -fx-focus-color: -fx-secondary;
+}
+
+.text-field:hover {
+    -fx-border-color: -fx-secondary; /* Change the border color on hover */
+}
+
+
+/*-------------------------MAIN CSS------------------------------------------------------------------------------ */

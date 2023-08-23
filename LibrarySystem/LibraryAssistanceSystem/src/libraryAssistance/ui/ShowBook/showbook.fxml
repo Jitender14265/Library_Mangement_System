@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryAssistance.ui.ShowBook.showBookController">
+   <children>
+      <TableView fx:id="tableView" layoutX="6.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="titleCol" prefWidth="120.0" text="BookTitle" />
+          <TableColumn fx:id="idCol" prefWidth="120.0" text="BookId" />
+            <TableColumn fx:id="authorCol" prefWidth="120.0" text="BookAuthor" />
+            <TableColumn fx:id="publisherCol" prefWidth="120.0" text="BookPublisher" />
+            <TableColumn fx:id="availableCol" prefWidth="120.0" text="Available" />
+        </columns>
+         <contextMenu>
+            <ContextMenu fx:id="context">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#EditAction" text="Edit" />
+                  <MenuItem mnemonicParsing="false" onAction="#DeleteAction" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#RefreshAction" text="Refresh" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

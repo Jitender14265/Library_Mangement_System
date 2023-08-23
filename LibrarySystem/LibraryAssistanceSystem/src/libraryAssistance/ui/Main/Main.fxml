@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" cache="true" focusTraversable="true" prefHeight="575.0" prefWidth="701.0" stylesheets="@../../../Resources/css/ssss.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryAssistance.ui.Main.MainController">
+   <children>
+      <BorderPane>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#closeMenu" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Add">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addBook" text="Add Book" />
+                        <MenuItem mnemonicParsing="false" onAction="#addMember" text="Add Member" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#viewMember" text="View Member" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewBook" text="View Book" />
+                        <MenuItem mnemonicParsing="false" onAction="#FullScreenMenu" text="FullScreen" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addbook" alignment="CENTER" contentDisplay="TOP" lineSpacing="2.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#addBook" prefHeight="105.0" prefWidth="128.0" text="Add Books">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../addb.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="0.4" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="viewbook" alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" lineSpacing="2.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewBook" prefHeight="105.0" prefWidth="128.0" text="View Books">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="47.0" fitWidth="55.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../book.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D width="44.0" />
+                           </viewport>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="0.4" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" lineSpacing="2.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addMember" prefHeight="105.0" prefWidth="128.0" text="Add Members">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../addmem.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="0.4" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="106.0" lineSpacing="2.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewMember" prefHeight="105.0" prefWidth="128.0" text="View Member">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../m.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="0.4" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="202.0" lineSpacing="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadSettings" prefHeight="105.0" prefWidth="128.0" text="Settings">
+                     <graphic>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../sss.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="0.4" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </VBox>
+         </right>
+         <center>
+            <TabPane style="-fx-cursor: hand;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Book Issue">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="567.0" translateY="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER" style="-fx-background-color: e7e7e7;" translateX="1.0">
+                                       <children>
+                                          <TextField fx:id="bookId" alignment="CENTER" onAction="#loadBook" prefHeight="19.0" prefWidth="128.0" promptText="Enter Book ID" styleClass="text-field-no-border" stylesheets="@../../../Resources/css/DarkTheme.css">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="181.0" prefWidth="354.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fx:id="bookName" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" textAlignment="CENTER" wrappingWidth="349.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                                <Text fx:id="bookAuthor" boundsType="LOGICAL_VERTICAL_CENTER" layoutX="15.0" layoutY="36.0" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="350.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                                <Text fx:id="bookStatus" layoutX="15.0" layoutY="116.0" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" textAlignment="CENTER" wrappingWidth="350.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </VBox>
+                              <VBox layoutY="200.0" prefHeight="200.0" prefWidth="567.0">
+                                 <children>
+                                    <HBox alignment="CENTER" minWidth="425.0" prefHeight="201.0" prefWidth="472.0" style="-fx-background-color: e7e7e7;">
+                                       <children>
+                                          <TextField fx:id="memberId" alignment="CENTER" onAction="#loadMember" prefHeight="39.0" prefWidth="187.0" promptText="Member ID" styleClass="text-field-no-border">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="181.0" prefWidth="354.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fx:id="memberName" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER" wrappingWidth="329.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                                <Text fx:id="department" layoutX="15.0" layoutY="36.0" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" textAlignment="CENTER" wrappingWidth="331.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                                <Text fx:id="phone" layoutX="14.0" layoutY="118.0" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" textAlignment="CENTER" wrappingWidth="331.0">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </Text>
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" layoutX="-3.0" layoutY="393.0" prefHeight="100.0" prefWidth="570.0">
+                                 <children>
+                                    <Button fx:id="issue" mnemonicParsing="false" onAction="#issueBook" prefHeight="53.0" prefWidth="110.0" text="ISSUE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView blendMode="SCREEN" fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../issue.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-text-fill: white;" text="Renew/Submisson">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="121.0" layoutY="111.0" prefHeight="493.0" prefWidth="567.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ListView fx:id="listview" prefHeight="370.0" prefWidth="463.0" BorderPane.alignment="CENTER">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ListView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="renew" mnemonicParsing="false" onAction="#renewBook" text="Renew">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="submission" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#submissiomBook" text="Submission" textFill="#282828">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </HBox>
+                                 </bottom>
+                                 <top>
+                                    <HBox alignment="CENTER" prefHeight="67.0" prefWidth="567.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="rbookId" alignment="CENTER" onAction="#loadmemberBookInfo" prefHeight="39.0" prefWidth="329.0" promptText="Enter Book ID">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </HBox>
+                                 </top>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </BorderPane>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Member Books">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="121.0" layoutY="111.0" prefHeight="493.0" prefWidth="567.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ListView fx:id="listview2" prefHeight="370.0" prefWidth="463.0" BorderPane.alignment="CENTER">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ListView>
+                                 </center>
+                                 <top>
+                                    <HBox alignment="CENTER" prefHeight="67.0" prefWidth="567.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="MmemberId" alignment="CENTER" onAction="#loadmemberBookInfo2" prefHeight="39.0" prefWidth="329.0" promptText="Enetr Member ID">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor>
+                                          </TextField>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </HBox>
+                                 </top>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </BorderPane>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TabPane>
+         </center>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </BorderPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</StackPane>
